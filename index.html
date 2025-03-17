@@ -10,9 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="./static/script.js" defer></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     
 </head>
-<body>
+<body onload= "addYear()">
     <header>
         <h1 id="webname">Anjali Dadlani</h1>
         <nav>
@@ -26,9 +30,19 @@
     <div class = "main">
         <h2 id="greeting">Hi, my name is Anjali</h2>
         <img src="static/anjali_pic.jpg" alt="This a picture of me at the beach!" style="width: 300px; height: 400px;">
-        <p id="intro">Hi my name is Anjali and I am a freshman at Carnegie Mellon University.</p>  
+        <p id="intro">About me:</p>  
+        <section id="bio">
+            <p id="shortBio">Hi my name is Anjali</p>
+            <p id="longBio" style="display: none;">Hi my name is Anjali and I am a freshman at Carnegie Mellon University.</p>
+            <button id="readMore">Read More</button>
+            <button id="readLess" style="display: none;">Read Less</button>
+        </section>
     </div>
-    
-    <footer>&copy; 2025 designed and coded by Anjali Dadlani</footer>
+
+    <footer>
+        <p id="copyYear"></p>
+        <p>Anjali Dadlani</p>
+    </footer>
 </body>
 </html>
+

@@ -52,3 +52,57 @@ function greetingFunc() {
 }
 
 greetingFunc();
+
+function addYear() {
+    d = new Date()
+    currYear = d.getFullYear();
+    E = document.getElementById("copyYear");
+    E.textContent = currYear;
+}
+
+function showList() {
+    list = document.querySelector('ul');
+    button = document.querySelector('button');
+    list.style.display = 'block';
+    button.style.display = 'none';
+}
+
+$(document).ready(function() {
+    $('#readMore').click(function() {
+        $('#shortBio').hide();
+        $('#longBio').show();
+        $('#readMore').hide();
+        $('#readLess').show();
+    });
+
+    $('#readLess').click(function() {
+        $('#shortBio').show();
+        $('#longBio').hide();
+        $('#readMore').show();
+        $('#readLess').hide();
+    });
+});
+
+function validate() {
+    formName = document.getElementById("name");
+    email = document.getElementById("email");
+    comment = document.getElementById("comment");
+    validationMessage = document.getElementById("validationMessage");
+    console.log("Form submission attempted");
+    if (!formName.checkValidity()) {
+        validationMessage.innerHTML= 'Please enter your name.';
+        validationMessage.style.display = "block";
+        console.log("Name valid:", formName.checkValidity());
+    } else if (!email.checkValidity()) {
+        validationMessage.innerHTML = 'Please enter a valid email address.';
+        console.log("Email valid:", email.checkValidity());
+    } else if (!comment.checkValidity()) {
+        validationMessage.innerHTML = 'Please enter your message.';
+        console.log("Message valid:", comment.checkValidity());
+    }
+
+}
+
+
+
+
