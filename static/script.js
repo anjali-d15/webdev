@@ -60,12 +60,12 @@ function addYear() {
     E.textContent = currYear;
 }
 
-function showList() {
-    list = document.querySelector('ul');
-    button = document.querySelector('button');
-    list.style.display = 'block';
-    button.style.display = 'none';
-}
+// function showList() {
+//     list = document.querySelector('ul');
+//     button = document.querySelector('button');
+//     list.style.display = 'block';
+//     button.style.display = 'none';
+// }
 
 $(document).ready(function() {
     $('#readMore').click(function() {
@@ -103,6 +103,18 @@ function validate() {
 
 }
 
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("adviceText").innerText = data.slip.advice;
+    })
+    .catch(error => {
+        console.error("Could not fetch advice")
+        document.getElementById("adviceText").innerText = "Try again later";
+    })
+}
 
 
 

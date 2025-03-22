@@ -23,14 +23,30 @@
     </header>
     
     <div class = "main">
-        <h2>Things I love to do for fun</h2>
-        <button onclick="showList()">Click to see...</button>
-        <ul style="display: none;">
-            <li>Baking</li>
-            <li>Running</li>
-            <li>Listening to Music</li>
-            <li>Exploring Pittsburgh</li>
-        </ul>
+        <div id="item 1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button onclick="showList()">Click to see...</button> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6072.897228819466!2d-79.94541945957809!3d40.44320675414639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f58679a9f%3A0x88716b461fc4daf4!2sCarnegie%20Mellon%20University!5e0!3m2!1sen!2sus!4v1742534376984!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <ul style="display: none;">
+                <li>Baking</li>
+                <li>Running</li>
+                <li>Listening to Music</li>
+                <li>Exploring Pittsburgh</li>
+            </ul>
+        </div>
+        <div class="item 2">
+            <img class="funIMG" style="border-radius: 100%"> 
+        </div>
+        <div id="item 3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MtN1YnoL46Q?si=6qq_nqKr8pVR6LNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>  
+        <div id="item 4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button onclick="getAdvice()">Get Advice!</button>
+            </div>
+        </div>     
     </div>
     <footer> 
         <p id="copyYear">&copy; designed and coded by Anjali Dadlani</p>
